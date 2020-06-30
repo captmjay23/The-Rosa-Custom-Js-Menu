@@ -1,0 +1,517 @@
+@import url(../css/style.css);
+/* Header */
+header {
+  width: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 1;
+  background-image: linear-gradient(
+    to bottom,
+    rgba(0,0,0,.5), transparent
+  );
+}
+.nav{
+  height: 72px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.nav .nav-list{
+  display: flex;
+  list-style-type: none;
+}
+.nav .nav-list .nav-list-item{
+  margin: 0 1em 0 0;
+}
+.nav .nav-list .nav-list-item:last-child{
+  margin-right: 0;
+}
+.nav .nav-list .nav-list-item a{
+  color: #fff;
+  font-size: 1rem;
+  transition: color .2s ease;
+}
+.nav .nav-list .nav-list-item a:hover{
+  color: var(--secondary-color);
+}
+.nav .menu-toggle{
+  color: #fff;
+  cursor: pointer;
+  font-size: 1.5rem;
+}
+
+/* Hero Section */
+.hero{
+  width: 100%;
+  height: 100vh;
+  background-image: url(../images/hero.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  text-align: center;
+  /* Layout */
+  display: flex;
+  align-items: center;
+  z-index: 1001;
+}
+.hero .sub-headline{
+  font-family: var(--secondary-font);
+  font-size: 4rem;
+  color: var(--secondary-color);
+  font-weight: 100;
+  line-height: .7em;
+}
+.hero .sub-headline .first-letter{
+  font-size: 7rem;
+}
+.hero .headline{
+  color: #fff;
+  text-transform: uppercase;
+  font-family: var(--main-font);
+  letter-spacing: 5px;
+}
+.hero .headline-description .separator {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.hero .headline-description .separator .line{
+  height: 2px;
+  width: 100%;
+  max-width: 100px;
+  background-color: var(--secondary-color);
+  position: relative;
+}
+.hero .headline-description .separator .asterisk{
+  color: var(--secondary-color);
+}
+.hero .headline-description .separator .line.line-left{
+  margin-right: 1em;
+}
+.hero .headline-description .separator .line.line-right{
+  margin-left: 1em;
+}
+.hero .headline-description .separator .line.line-left::before,
+.hero .headline-description .separator .line.line-right::before{
+  content: '';
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  border: .6rem solid transparent;
+}
+.hero .headline-description .separator .line.line-left::before{
+  right: -15px;
+  border-left-color: var(--secondary-color);
+}
+.hero .headline-description .separator .line.line-right::before{
+  left: -15px;
+  border-right-color: var(--secondary-color);
+}
+.hero .headline-description .single-animation h5{
+  color: #fff;
+  font-size: 1.125rem;
+  font-weight: 100;
+  text-transform: uppercase;
+  letter-spacing: 4px;
+}
+/* Discover Our Story */
+.discover-our-story .restaurant-info{
+  text-align: center;
+  display: flex;
+  align-items: center;
+}
+.discover-our-story .restaurant-info .restaurant-description{
+  width: 100%;
+  max-width: 612px;
+  margin-right: 5em;
+}
+.global-headline{
+  text-align: center;
+}
+.global-headline .sub-headline{
+  font-family: var(--secondary-font);
+  font-size: 4rem;
+  color: var(--secondary-color);
+  font-weight: 100;
+  line-height: .7em;
+}
+.global-headline .sub-headline .first-letter{
+  font-size: 7rem;
+}
+.global-headline .headline{
+  color: var(--main-color);
+  text-transform: uppercase;
+  font-family: var(--main-font);
+  letter-spacing: 5px;
+}
+.global-headline .asterisk{
+  color: var(--secondary-color);
+}
+/* Tasteful Recipes */
+.tasteful-recipe{
+  background-image: url(../images/tasteful-recipes.jpg);
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+  min-height: 65vh;
+  /* Layout */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.tasteful-recipe .global-headline .sub-headline{
+  font-size: 6rem;
+}
+.tasteful-recipe .global-headline .headline{
+  color: #fff;
+  letter-spacing: 15px;
+  font-weight: 900;
+  margin-top: .5em;
+}
+/* Discover Menu */
+.discover-menu .restaurant-info{
+ display: flex;
+ align-items: center;
+}
+.discover-menu .discover-menu-info-img{
+  display: grid;
+  grid-template-columns: repeat(2,1fr);
+  grid-gap: 10px;
+}
+.discover-menu .restaurant-info .restaurant-description {
+  padding-top: 4em;
+  max-width: 612px;
+  width: 100%;
+  margin-left: 5em;
+}
+/* The Perfect Blend */
+.perfect-blend{
+  background-image: url(../images/perfect-blend.jpg);
+  min-height: 65vh;
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+  background-repeat: no-repeat;
+  /* Layout */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.perfect-blend .global-headline .headline{
+  color: #fff;
+  font-size: 2.5rem;
+}
+/* Culinary Delight */
+.culinary-delight .restaurant-info{
+  display: flex;
+  align-items: center;
+}
+.culinary-delight .restaurant-info .restaurant-description{
+  max-width: 612px;
+  width: 100%;
+  margin-right: 5em;
+}
+.culinary-delight .restaurant-info .culinary-img-info{
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-column-gap: 10px;
+}
+/* About Rosa */
+.about-rosa{
+  background-color: #121212;
+  position: relative;
+}
+.about-rosa .back-to-top{
+  position: absolute;
+  width: 5em;
+  height: 5em;
+  top: -30px;
+  left: 50%;
+  transform: translateX(-50%);
+  cursor: pointer;
+  background-color: #121212;
+  border-radius: 50%;
+}
+.about-rosa .back-to-top i{
+  color: #fff;
+  display: block;
+  text-align: center;
+  margin-top: .5em;
+  font-size: 1.5rem;
+}
+
+.about-rosa .restaurant-info .restaurant-description .global-headline .headline{
+  color: #fff;
+  font-size: 1.2rem;
+  margin-bottom: .9em;
+}
+.about-rosa .restaurant-info .restaurant-description .global-headline p{
+  color: #fff;
+}
+.about-rosa .restaurant-info .restaurant-description .get-in-touch{
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+.about-rosa .restaurant-info .restaurant-description .get-in-touch .follow-along h2,
+.about-rosa .restaurant-info .restaurant-description .get-in-touch .newsletter h2{
+  color: #fff;
+  margin-top: 1em;
+  font-weight: 100;
+  letter-spacing: 5px;
+}
+.about-rosa .restaurant-info .restaurant-description .get-in-touch .follow-along .social-link{
+  list-style-type: none;
+}
+.about-rosa .restaurant-info .restaurant-description .get-in-touch .follow-along .social-link li{
+  display: inline;
+  margin: 0 .5em;
+}
+.about-rosa .restaurant-info .restaurant-description .get-in-touch .follow-along .social-link li a{
+  font-size: 1.5rem;
+  color: #fff;
+  transition: color .2s ease-in;
+}
+.about-rosa .restaurant-info .restaurant-description .get-in-touch .follow-along .social-link li a:hover{
+  color: var(--secondary-color);
+}
+.about-rosa .restaurant-info .restaurant-description .get-in-touch .newsletter .newsletter-form{
+  width: 100%;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.about-rosa .restaurant-info .restaurant-description .get-in-touch .newsletter .inputForm{
+  padding: 1em 5em 1em 1em;
+  border: none;
+  width: 100%;
+  max-width: 250px;
+  cursor: pointer;
+  font-family: var(--body-font);
+  border-radius: 5px;
+}
+.about-rosa .restaurant-info .restaurant-description .get-in-touch .newsletter .newsletter-btn{
+  cursor: pointer;
+  border: none;
+  position: absolute;
+  color: var(--main-color);
+  top: 50%;
+  transform: translateY(-50%);
+  margin-left: 6em;
+}
+/* Media Queries */
+/* Large Devices */
+@media only screen and (max-width: 992px) and (min-width: 768px){
+  .hide-desktop{
+    display: block;
+  }
+  .nav .nav-list{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 80vw;
+    height: 100vh;
+    background-color: var(--main-color);
+    transition: transform .5s ease-in;
+    /* Layout */
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+  }
+  .nav .nav-list .nav-list-item::after{
+    content: '';
+    display: block;
+    background-color: #fff;
+    width: 100%;
+    height: 3px;
+    transition: background-color .2s ease-in;
+  }
+  .nav .nav-list .nav-list-item:hover::after{
+    background-color: var(--secondary-color);
+  }
+  /* Effect When Burger Icon Been Clicked */
+  .nav .nav-list.hide{
+    transform: translateX(-100%);
+  }
+  .nav .nav-list.show{
+    transform: translateX(0%);
+  }
+  /* Our Story */
+  .discover-our-story .restaurant-info{
+    flex-direction: column;
+  }
+  .discover-our-story .restaurant-info .restaurant-description{
+    margin: 0;
+  }
+  .discover-our-story .restaurant-info .restaurant-info-img{
+    width: 100%;
+  }
+  /* Discover Menu */
+  .discover-menu .restaurant-info{
+    flex-direction: column;
+  }
+  .discover-menu .restaurant-info .restaurant-description{
+    margin: 0;
+  }
+  /* Culinary Delight */
+  .culinary-delight .restaurant-info{
+    flex-direction: column;
+  }
+  .culinary-delight .restaurant-info .restaurant-description{
+    margin: 0;
+  }
+   /* About Rosa */
+   .about-rosa .restaurant-info .get-in-touch{
+    flex-direction: column;
+  }
+  .about-rosa .restaurant-info .get-in-touch .follow-along h2{
+    text-align: center;
+  }
+  .about-rosa .restaurant-info .get-in-touch .newsletter h2{
+    text-align: center;
+  }
+}
+/* Medium Devices */
+@media only screen and (max-width: 768px) and (min-width: 568px){
+  .hide-desktop{
+    display: block;
+  }
+  .nav .nav-list{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 80vw;
+    height: 100vh;
+    background-color: var(--main-color);
+    transition: transform .5s ease-in;
+    /* Layout */
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+  }
+  .nav .nav-list .nav-list-item::after{
+    content: '';
+    display: block;
+    background-color: #fff;
+    width: 100%;
+    height: 3px;
+    transition: background-color .2s ease-in;
+  }
+  .nav .nav-list .nav-list-item:hover::after{
+    background-color: var(--secondary-color);
+  }
+  /* Effect When Burger Icon Been Clicked */
+  .nav .nav-list.hide{
+    transform: translateX(-100%);
+  }
+  .nav .nav-list.show{
+    transform: translateX(0%);
+  }
+   /* Our Story */
+   .discover-our-story .restaurant-info{
+    flex-direction: column;
+  }
+  .discover-our-story .restaurant-info .restaurant-description{
+    margin: 0;
+  }
+  .discover-our-story .restaurant-info .restaurant-info-img{
+    width: 100%;
+  }
+  /* Discover Menu */
+  .discover-menu .restaurant-info{
+    flex-direction: column;
+  }
+  .discover-menu .restaurant-info .restaurant-description{
+    margin: 0;
+  }
+  /* Culinary Delight */
+  .culinary-delight .restaurant-info{
+    flex-direction: column;
+  }
+  .culinary-delight .restaurant-info .restaurant-description{
+    margin: 0;
+  }
+  /* About Rosa */
+  .about-rosa .restaurant-info .get-in-touch{
+    flex-direction: column;
+  }
+  .about-rosa .restaurant-info .get-in-touch .follow-along h2{
+    text-align: center;
+  }
+  .about-rosa .restaurant-info .get-in-touch .newsletter h2{
+    text-align: center;
+  }
+}
+/* Small Devices */
+@media only screen and (max-width: 568px) and (min-width: 375px){
+  .hide-desktop{
+    display: block;
+  }
+  .nav .nav-list{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 80vw;
+    height: 100vh;
+    background-color: var(--main-color);
+    transition: transform .5s ease-in;
+    /* Layout */
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+  }
+  .nav .nav-list .nav-list-item::after{
+    content: '';
+    display: block;
+    background-color: #fff;
+    width: 100%;
+    height: 3px;
+    transition: background-color .2s ease-in;
+  }
+  .nav .nav-list .nav-list-item:hover::after{
+    background-color: var(--secondary-color);
+  }
+  /* Effect When Burger Icon Been Clicked */
+  .nav .nav-list.hide{
+    transform: translateX(-100%);
+  }
+  .nav .nav-list.show{
+    transform: translateX(0%);
+  }
+   /* Our Story */
+   .discover-our-story .restaurant-info{
+    flex-direction: column;
+  }
+  .discover-our-story .restaurant-info .restaurant-description{
+    margin: 0;
+  }
+  .discover-our-story .restaurant-info .restaurant-info-img{
+    width: 100%;
+  }
+  /* Discover Menu */
+  .discover-menu .restaurant-info{
+    flex-direction: column;
+  }
+  .discover-menu .restaurant-info .restaurant-description{
+    margin: 0;
+  }
+  /* Culinary Delight */
+  .culinary-delight .restaurant-info{
+    flex-direction: column;
+  }
+  .culinary-delight .restaurant-info .restaurant-description{
+    margin: 0;
+  }
+   /* About Rosa */
+   .about-rosa .restaurant-info .get-in-touch{
+    flex-direction: column;
+  }
+  .about-rosa .restaurant-info .get-in-touch .follow-along h2{
+    text-align: center;
+  }
+  .about-rosa .restaurant-info .get-in-touch .newsletter h2{
+    text-align: center;
+  }
+}
