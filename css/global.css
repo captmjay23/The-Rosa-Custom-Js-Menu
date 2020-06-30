@@ -301,6 +301,25 @@ header {
   transform: translateY(-50%);
   margin-left: 6em;
 }
+/* Footer */
+.footer{
+  background-color: #252525;
+}
+.footer .footer-content{
+  list-style-type: none;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  padding: 5vh;
+}
+.footer .footer-content li{
+  color: #fff;
+  margin-right: 1em;
+}
+.footer .footer-content li:last-child{
+  margin-right: 0;
+}
 /* Media Queries */
 /* Large Devices */
 @media only screen and (max-width: 992px) and (min-width: 768px){
