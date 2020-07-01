@@ -534,3 +534,74 @@ header {
     text-align: center;
   }
 }
+/* Extra Small Devices */
+@media only screen and (max-width: 375px) and (min-width: 0px){
+  .hide-desktop{
+    display: block;
+  }
+  .nav .nav-list{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 80vw;
+    height: 100vh;
+    background-color: var(--main-color);
+    transition: transform .5s ease-in;
+    /* Layout */
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+  }
+  .nav .nav-list .nav-list-item::after{
+    content: '';
+    display: block;
+    background-color: #fff;
+    width: 100%;
+    height: 3px;
+    transition: background-color .2s ease-in;
+  }
+  .nav .nav-list .nav-list-item:hover::after{
+    background-color: var(--secondary-color);
+  }
+  /* Effect When Burger Icon Been Clicked */
+  .nav .nav-list.hide{
+    transform: translateX(-100%);
+  }
+  .nav .nav-list.show{
+    transform: translateX(0%);
+  }
+   /* Our Story */
+   .discover-our-story .restaurant-info{
+    flex-direction: column;
+  }
+  .discover-our-story .restaurant-info .restaurant-description{
+    margin: 0;
+  }
+  .discover-our-story .restaurant-info .restaurant-info-img{
+    width: 100%;
+  }
+  /* Discover Menu */
+  .discover-menu .restaurant-info{
+    flex-direction: column;
+  }
+  .discover-menu .restaurant-info .restaurant-description{
+    margin: 0;
+  }
+  /* Culinary Delight */
+  .culinary-delight .restaurant-info{
+    flex-direction: column;
+  }
+  .culinary-delight .restaurant-info .restaurant-description{
+    margin: 0;
+  }
+   /* About Rosa */
+   .about-rosa .restaurant-info .get-in-touch{
+    flex-direction: column;
+  }
+  .about-rosa .restaurant-info .get-in-touch .follow-along h2{
+    text-align: center;
+  }
+  .about-rosa .restaurant-info .get-in-touch .newsletter h2{
+    text-align: center;
+  }
+}
